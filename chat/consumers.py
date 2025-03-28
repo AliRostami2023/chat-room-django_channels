@@ -63,7 +63,7 @@ class GroupChatConsumer(AsyncWebsocketConsumer):
     def save_message(self, content, file_url):
         return Message.objects.create(
             sender = self.user,
-            roup_id=self.group_id,
+            group_id=self.group_id,
             content=content,
             file=file_url if file_url else None
         )    
